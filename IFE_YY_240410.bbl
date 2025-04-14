@@ -6,7 +6,7 @@
 %Control: page (0) single
 %Control: year (1) truncated
 %Control: production of eprint (0) enabled
-\begin{thebibliography}{20}%
+\begin{thebibliography}{21}%
 \makeatletter
 \providecommand \@ifxundefined [1]{%
  \@ifx{#1\undefined}
@@ -109,4 +109,7 @@
 \bibitem [{\citenamefont {Lapa}\ and\ \citenamefont {Hughes}(2019)}]{Lapa_Hughes_2019}%
   \BibitemOpen
   \bibfield  {author} {\bibinfo {author} {\bibfnamefont {M.~F.}\ \bibnamefont {Lapa}}\ and\ \bibinfo {author} {\bibfnamefont {T.~L.}\ \bibnamefont {Hughes}},\ }\bibfield  {title} {\bibinfo {title} {Semiclassical wave packet dynamics in nonuniform electric fields},\ }\href {https://doi.org/10.1103/PhysRevB.99.121111} {\bibfield  {journal} {\bibinfo  {journal} {Phys. Rev. B}\ }\textbf {\bibinfo {volume} {99}},\ \bibinfo {pages} {121111} (\bibinfo {year} {2019})}\BibitemShut {NoStop}%
+\bibitem [{\citenamefont {Provost}\ and\ \citenamefont {Vallee}(1980)}]{Provost_1980}%
+  \BibitemOpen
+  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {J.~P.}\ \bibnamefont {Provost}}\ and\ \bibinfo {author} {\bibfnamefont {G.}~\bibnamefont {Vallee}},\ }\bibfield  {title} {\bibinfo {title} {{Riemannian structure on manifolds of quantum states}},\ }\href {https://doi.org/10.1007/BF02193559} {\bibfield  {journal} {\bibinfo  {journal} {Commun. Math. Phys.}\ }\textbf {\bibinfo {volume} {76}},\ \bibinfo {pages} {289} (\bibinfo {year} {1980})}\BibitemShut {NoStop}%
 \end{thebibliography}%

@@ -35,35 +35,43 @@ Nonlinear optical effects--which arise from higher-order responses (second order
 
 In this letter, we unveil a novel mechanism of light-induced magnetization in electronic systems, mediated by quantum geometric effects. We consider spatially non-uniform light, characterized by an electric field with explicit position dependence. This spatial variation modifies the semiclassical equation of motion for electrons~\cite{Lapa_Hughes_2019}, which in turn alters the second-order current response derived from the Boltzmann transport equation. The resulting current, arising from the spatial inhomogeneity of the electric field, can be interpreted as a magnetization current, allowing us to derive an expression for light-induced magnetization as a second-order response to the electric field. This effect originates from Fermi surface contributions and is therefore relevant only in metallic systems. Remarkably, unlike the conventional inverse Faraday effect, it can be induced even by linearly polarized light. We further demonstrate the magnitude of this effect through a model calculation based on a simple Dirac Hamiltonian.
 
-\section{Derivation}
-We start from the semiclassical equation of motion of an electron under non-uniform electric field~\cite{Lapa_Hughes_2019}. We expand the position-dependent electric field $\vb{E}(\vb{x})$ around origin as
+We start from the semiclassical equation of motion of an electron under non-uniform electric field. Here we consider time-independent electric field \textcolor{blue}{under an assumption that the time variation of an electric field is slow enough}. Then, our setup is the same as in Ref.~\cite{Lapa_Hughes_2019}. The Hamiltonian of the system is given as
+\be
+    \hat{H}&=\hat{H}_0+Q\phi(\hat{\vb{x}}),
+\ee
+where $H_0$ is a static Hamiltonian including a periodic potential,$Q=-e$ is the charge of an electron, and $\phi$ is a scalar potential that gives the electric field $E_{\mu}=-\pdv{\phi}{x_{\mu}}\ (\mu=x,y,z)$. We expand the position-dependent electric field $\vb{E}(\vb{x})$ around the origin as 
 \be
     E_{\mu}(\vb{x})&=e_{\mu}+e_{\mu\nu}x_{\nu},
 \ee
-where $\mu=x,y,z$ is the cartesian coordinate, $e_{\mu}=E_{\mu}(\vb{x}=\vb{0})$ and $e_{\mu\nu}=\partial E_{\mu}/\partial x_{\nu}\eval_{\vb{x}=\vb{0}}$. Then, in Ref.~\cite{Lapa_Hughes_2019}, the equation of motion (EOM) of an electron is derived as
+where $e_{\mu}=E_{\mu}(\vb{x}=\vb{0})$ and $e_{\mu\nu}=\pdv{E_{\mu}}{x_{\nu}}\eval_{\vb{x}=\vb{0}}$ are the electric field and its gradient at the origin, respectively. Because the electric field is a gradient of the scalar potential, $e_{\mu\nu}=e_{\nu\mu}$. In Ref.~\cite{Lapa_Hughes_2019}, the equation of motion (EOM) of an electron in this setting is derived as
 \be
-    \dot{x}_{\mu}&=\frac{1}{\hbar}\pdv{\varepsilon}{k_{\mu}}-\Omega_{\mu\nu}\dot{k}_{\nu}-\frac{1}{2\hbar}Qe_{\nu\lambda}\pdv{g_{\nu\lambda}}{k_{\mu}},\\
-    \dot{k_{\mu}}&=\frac{1}{\hbar}QE_{\mu}(\vb{x}).
+    \dot{x}_{\mu}&=\frac{1}{\hbar}\pdv{\varepsilon}{k_{\mu}}-\Omega_{\mu\nu}\dot{k}_{\nu}-\frac{1}{2\hbar}Qe_{\nu\lambda}\pdv{g_{\nu\lambda}}{k_{\mu}},\label{eq:EOM_x}\\
+    \dot{k_{\mu}}&=\frac{1}{\hbar}QE_{\mu}(\vb{x})\label{eq:EOM_k}.
 \ee
-Here, $\varepsilon$ is energy of the electron, $\Omega_{\mu\nu}\coloneqq$ is the Berry curvature, $g_{\nu\lambda}\coloneqq$ is the quantum metric.
+Here, $\varepsilon$ is the energy of the electron satisfying $\hat{H}_0\ket{\phi(\vb{k})}=\varepsilon(\vb{k})\ket{\phi(\vb{k})}$, focusing on the single-band Bloch state and $\Omega_{\mu\nu}\coloneqq i\qty(\bra{\pdv{u}{k_{\mu}}}\ket{\pdv{u}{k_{\nu}}}-\qty(\mu\leftrightarrow\nu))$ is the Berry curvature, and
+\be
+    g_{\mu\nu}\coloneqq \frac{1}{2}\qty(\bra{\pdv{u}{k_{\mu}}}\ket{\pdv{u}{k_{\nu}}}-\bra{\pdv{u}{k_{\mu}}}\ket{u}\bra{u}\ket{\pdv{u}{k_{\nu}}}+\qty(\mu\leftrightarrow\nu))
+\ee
+is the quantum metric. These quantities correspond to the imaginary and real part of the quantum geometric tensor~\cite{Provost_1980}, respectively. In the equations of motion, the first term of Eq.~\eqref{eq:EOM_x} is the conventional term showing the group velocity. The second term of Eq.~\eqref{eq:EOM_x} and the other Eq.~\eqref{eq:EOM_k} include the effect of an applied electric field. The third term of Eq.~\eqref{eq:EOM_x} is unique to the non-uniform electric field.
 
-We first calculate electric current density of this system using the Boltzmann formalism. Boltzmann equation with relaxation time approximation can be written as~[reference]
+From the EOMs, we next calculate the electric current density of this system using the Boltzmann formalism. Boltzmann equation with relaxation time approximation can be written as
 \be
     \pdv{f}{t}+\dot{\vb{x}}\cdot\pdv{f}{\vb{x}}+\dot{\vb{k}}\cdot\pdv{f}{\vb{k}}=-\frac{f-f_0}{\tau},
 \ee
-where $f$ is the distribution function of the system, $f_0$ is the equilibrium Fermi distribution function, and $\tau$ is the relaxation time of an electron. We calculate the change of the distribution function $f-f_0$ up to a first order of $\tau$. In this case, $f$ in the left hand side can be approximated to be $f_0$ and $\pdv{f_0}{t}=0$ and $\pdv{f_0}{\vb{x}}=\vb{0}$. We get
+where $f$ is the distribution function of the system, $f_0$ is the equilibrium Fermi distribution function, and $\tau$ is the relaxation time of an electron. We calculate the change of the distribution function $f-f_0$ up to a first order of $\tau$. In this case, $f$ in the left hand side can be approximated to be $f_0$. Suppose that $\pdv{f_0}{t}=0$ and $\pdv{f_0}{\vb{x}}=\vb{0}$, we get
 \be
-    f&\approx f_0+\tau \dot{k}_{\mu}\pdv{f_0}{k_{\mu}}\nonumber\\
-    &=f_0+\frac{\tau Q}{\hbar}E_{\mu}(\vb{x})\pdv{f_0}{k_{\mu}}.
+    f&\approx f_0+\frac{\tau Q}{\hbar}E_{\mu}(\vb{x})\pdv{f_0}{k_{\mu}}.
 \ee
 This distribution function has the same form as the one under uniform electric field. Using this distribution function, the electric current can be calculated as
-\be
-    j_{\mu}&\coloneqq Q\int[\mathrm{d}\vb{k}]f\dot{x}_{\mu}\nonumber\\
-    &=Q\int[\mathrm{d}\vb{k}]\qty(f_0+\frac{\tau Q}{\hbar}E_{\mu}(\vb{x})\pdv{f_0}{k_{\mu}})\times\qty(\frac{1}{\hbar}\pdv{\varepsilon}{k_{\mu}}-\frac{Q}{\hbar}\Omega_{\mu\nu}E_{\nu}(\vb{x})-\frac{Q}{2\hbar}e_{\nu\lambda}\pdv{g_{\nu\lambda}}{k_{\mu}})\\
-    &=\frac{Q}{\hbar}\int[\mathrm{d}\vb{k}]f_0\pdv{\varepsilon}{k_{\mu}}\nonumber\\
-    &\quad+\qty(\frac{\tau Q^2}{\hbar^2}\int[\mathrm{d}\vb{k}]\pdv{f_0}{k_{\nu}}\pdv{\varepsilon}{k_{\mu}}-\frac{Q^2}{\hbar}\int[\mathrm{d}\vb{k}]f_0\Omega_{\mu\nu})E_{\nu}(\vb{x})-\frac{Q^2}{2\hbar}\int[\mathrm{d}\vb{k}]f_0\pdv{g_{\nu\lambda}}{k_{\mu}}e_{\nu\lambda}\nonumber\\
-    &\qquad -\frac{\tau Q^3}{\hbar^2}\int[\mathrm{d}\vb{k}]\pdv{f_0}{k_{\nu}}\Omega_{\mu\gamma}E_{\nu}E_{\gamma}-\frac{\tau Q^3}{2\hbar^2}\int[\mathrm{d}\vb{k}]\pdv{f_0}{k_{\gamma}}\pdv{g_{\nu\lambda}}{k_{\mu}}E_{\gamma}e_{\nu\lambda}.\label{eq:current_general}
-\ee
+\begin{widetext}
+    \be
+        j_{\mu}&\coloneqq Q\int[\mathrm{d}\vb{k}]f\dot{x}_{\mu}\nonumber\\
+        &=\frac{Q}{\hbar}\int[\mathrm{d}\vb{k}]f_0\pdv{\varepsilon}{k_{\mu}}+\qty(\frac{\tau Q^2}{\hbar^2}\int[\mathrm{d}\vb{k}]\pdv{f_0}{k_{\nu}}\pdv{\varepsilon}{k_{\mu}}-\frac{Q^2}{\hbar}\int[\mathrm{d}\vb{k}]f_0\Omega_{\mu\nu})E_{\nu}(\vb{x})-\frac{Q^2}{2\hbar}\int[\mathrm{d}\vb{k}]f_0\pdv{g_{\nu\lambda}}{k_{\mu}}e_{\nu\lambda}\nonumber\\
+        &\hspace{7cm} -\frac{\tau Q^3}{\hbar^2}\int[\mathrm{d}\vb{k}]\pdv{f_0}{k_{\nu}}\Omega_{\mu\gamma}E_{\nu}E_{\gamma}-\frac{\tau Q^3}{2\hbar^2}\int[\mathrm{d}\vb{k}]\pdv{f_0}{k_{\gamma}}\pdv{g_{\nu\lambda}}{k_{\mu}}E_{\gamma}e_{\nu\lambda}.\label{eq:current_general}
+    \ee
+\end{widetext}
+Here, $\qty[\mathrm{d}\vb{k}] = \frac{\mathrm{d}\vb{k}}{(2\pi)^d}$ with the dimension of the system $d$ and the integration is over the whole Brillouin zone. The first three terms in Eq.~\eqref{eq:current_general} have the conventional current caused by the application of the electric field. 
+
 Magnetization and the current density are related by the Maxwell equations:
 \be
     \vb{j}&=\curl\vb{H}-\pdv{\vb{D}}{t},
