@@ -62,60 +62,57 @@ where $f$ is the distribution function of the system, $f_0$ is the equilibrium F
 \be
     f&\approx f_0+\frac{\tau Q}{\hbar}E_{\mu}(\vb{x})\pdv{f_0}{k_{\mu}}.
 \ee
-This distribution function has the same form as the one under uniform electric field. Using this distribution function, the electric current can be calculated as
+This distribution function has the same form as the one under uniform electric field. Using this distribution function, the electric current density $j_{\mu}\coloneqq Q\int[\mathrm{d}\vb{k}]f\dot{x}_{\mu}$ can be calculated as
 \begin{widetext}
     \be
-        j_{\mu}&\coloneqq Q\int[\mathrm{d}\vb{k}]f\dot{x}_{\mu}\nonumber\\
-        &=\frac{Q}{\hbar}\int[\mathrm{d}\vb{k}]f_0\pdv{\varepsilon}{k_{\mu}}+\qty(\frac{\tau Q^2}{\hbar^2}\int[\mathrm{d}\vb{k}]\pdv{f_0}{k_{\nu}}\pdv{\varepsilon}{k_{\mu}}-\frac{Q^2}{\hbar}\int[\mathrm{d}\vb{k}]f_0\Omega_{\mu\nu})E_{\nu}(\vb{x})-\frac{Q^2}{2\hbar}\int[\mathrm{d}\vb{k}]f_0\pdv{g_{\nu\lambda}}{k_{\mu}}e_{\nu\lambda}\nonumber\\
+        j_{\mu}&=\frac{Q}{\hbar}\int[\mathrm{d}\vb{k}]f_0\pdv{\varepsilon}{k_{\mu}}+\qty(\frac{\tau Q^2}{\hbar^2}\int[\mathrm{d}\vb{k}]\pdv{f_0}{k_{\nu}}\pdv{\varepsilon}{k_{\mu}}-\frac{Q^2}{\hbar}\int[\mathrm{d}\vb{k}]f_0\Omega_{\mu\nu})E_{\nu}(\vb{x})-\frac{Q^2}{2\hbar}\int[\mathrm{d}\vb{k}]f_0\pdv{g_{\nu\lambda}}{k_{\mu}}e_{\nu\lambda}\nonumber\\
         &\hspace{7cm} -\frac{\tau Q^3}{\hbar^2}\int[\mathrm{d}\vb{k}]\pdv{f_0}{k_{\nu}}\Omega_{\mu\gamma}E_{\nu}E_{\gamma}-\frac{\tau Q^3}{2\hbar^2}\int[\mathrm{d}\vb{k}]\pdv{f_0}{k_{\gamma}}\pdv{g_{\nu\lambda}}{k_{\mu}}E_{\gamma}e_{\nu\lambda}.\label{eq:current_general}
     \ee
 \end{widetext}
-Here, $\qty[\mathrm{d}\vb{k}] = \frac{\mathrm{d}\vb{k}}{(2\pi)^d}$ with the dimension of the system $d$ and the integration is over the whole Brillouin zone. The first three terms in Eq.~\eqref{eq:current_general} have the conventional current caused by the application of the electric field. 
+Here, $\qty[\mathrm{d}\vb{k}] = \frac{\mathrm{d}\vb{k}}{(2\pi)^d}$ with the dimension of the system $d$ and the integration is over the whole Brillouin zone. The first three terms in Eq.~\eqref{eq:current_general} represent conventional currents caused by the application of the electric field. In Ref.~\cite{Lapa_Hughes_2019}, the fourth term is referred as the ``geometric'' current. This geometric current is caused by the gradient of the electric field and quantum metric. Using integration by parts, this current can be calculated as a Fermi surface integration of the quantum metric. The last two terms are the second-order response to the applied electric field. They are represented also as Fermi surface integration of Berry curvature and the derivative of the quantum metric (metric dipole), respectively and thus, only present in metallic systems.
 
-Magnetization and the current density are related by the Maxwell equations:
+We next turn our attention to the magnetization. In a system with magnetization $\vb{M}$, the associated magnetization current is defined as
 \be
-    \vb{j}&=\curl\vb{H}-\pdv{\vb{D}}{t},
+    \vb{j}_{\mathrm{mag}}&\coloneqq\curl{\vb{M}},
 \ee
-where
+where $\nabla$ is the derivative with respect to the real space coordinates. We focus on a magnetization that is induced as a second-order response to the electric field of light and assume that
 \be
-    \vb{H}&=\frac{1}{\mu_0}\vb{B}-\vb{M},\\
-    \vb{D}&=\varepsilon_0\vb{E}+\vb{P}.
+    M_{\alpha}(\vb{x})&=a_{\alpha\beta\gamma}E_{\beta}(\vb{x})E_{\gamma}(\vb{x}).\label{eq:M_def}
 \ee
-Here, we only consider the case where the external magnetic field is zero $\vb{B}=\vb{0}$ and the system is in a steady state $\pdv{\vb{D}}{t}=0$. Thus,
+Then, the magnetization current caused by this magnetization can be calculated as
 \be
-    \vb{j}&=-\curl{\vb{M}}.
+    j_{\mathrm{mag},\mu}(\vb{x}) &=-2\varepsilon_{\mu\nu\alpha}a_{\alpha\gamma\lambda}E_{\gamma}(\vb{x})\partial_{\nu}E_{\lambda}(\vb{x}).
 \ee
-We focus on a magnetization that is induced as a second-order response to the electric field of light and assume that
+\textcolor{blue}{We here focus on the current at the origin as a dominant contribution.} Then, the magnetization current can be written as
 \be
-    M_{\mu}&=a_{\mu\alpha\beta}E_{\alpha}(\vb{x})E_{\beta}(\vb{x}).
+    j_{\mathrm{mag},\mu}&=-2\varepsilon_{\mu\nu\alpha}a_{\alpha\gamma\lambda}e_{\gamma}e_{\lambda\nu}.
 \ee
-Then, the current can be calculated as
+In the general expression of the current in Eq.~\eqref{eq:current_general}, the last term has the same form as this current, depending on the zeroth- and first-order derivatives of the electric field. Therefore, the last term of Eq.~\eqref{eq:current_general} can be understood as a magnetization current caused by a magnetization $\vb{M}$ induced by the light, i.e. by IFE. By comparing the expressions, we find
 \be
-    j_a &= -\varepsilon_{abc}\partial_{b}M_{c}\nonumber\\
-    &= -\varepsilon_{abc}\partial_{b}\qty(a_{c\alpha\beta}E_{\alpha}(\vb{x})E_{\beta}(\vb{x}))\nonumber\\
-    &=-2\varepsilon_{abc}a_{c\alpha\beta}E_{\alpha}(\vb{x})\partial_bE_{\beta}(\vb{x})\nonumber\\
-    &\approx -2\varepsilon_{abc}a_{c\alpha\beta}E_{\alpha}(\vb{x})e_{\beta b}
+    \varepsilon_{\mu\nu\alpha}a_{\alpha\gamma\lambda}&=\frac{\tau Q^3}{4\hbar^2}\int[\mathrm{d}\vb{k}]\pdv{f_0}{k_{\gamma}}\pdv{g_{\nu\lambda}}{k_{\mu}}.
 \ee
-By comparing this expression with Eq.~\eqref{eq:current_general}, we find that the last term of Eq.~\eqref{eq:current_general} is responsible for the current caused by the magnetization. We get
+Thus, we get a formula of the coefficient defined in Eq.~\eqref{eq:M_def} for the IFE caused by the non-uniform electric fields as
 \be
-    \varepsilon_{\mu\lambda c}a_{c\gamma\nu}&=\frac{\tau Q^3}{4\hbar^2}\int[\mathrm{d}\vb{k}]\pdv{f_0}{k_{\gamma}}\pdv{g_{\nu\lambda}}{k_{\mu}}E_{\gamma}e_{\nu\lambda}.
+    a_{\mu\alpha\beta}&=\frac{\tau Q^3}{\hbar^2}\varepsilon_{\mu\nu\delta}\int[\mathrm{d}\vb{k}]\pdv{f_0}{k_{\alpha}}\pdv{g_{\delta\beta}}{k_{\nu}}\label{eq:coeff_metric}
 \ee
-Thus, we get a formula for the coefficient
-\be
-    a_{\mu\alpha\beta}&=\frac{\tau Q^3}{\hbar^2}\varepsilon_{\mu\nu\delta}\int[\mathrm{d}\vb{k}]\pdv{f_0}{k_{\alpha}}\pdv{g_{\delta\beta}}{k_{\nu}}.\label{eq:coeff_metric}.
-\ee
-From quantum metric, Christoffel symbol can be defined as
+This is our main result. Note that even when $\alpha=\beta$, where the illuminated light is linearly polarized, this effect, can be non-zero in general. This is a clear distinction from the conventional IFE, where magnetization can only be induced for circularly polarized light.
+
+We can rewrite the expression using the Christoffel symbol which highlights the quantum geometric nature of the effect. From the quantum metric, Christoffel symbol can be defined as
 \be
     \Gamma_{\alpha\beta\gamma}&\coloneqq\frac{1}{2}\qty(\partial_{k_{\gamma}}g_{\alpha\beta}+\partial_{k_{\beta}}g_{\alpha\gamma}-\partial_{k_{\alpha}}g_{\beta\gamma}).
 \ee
 Then, it is easy to see
 \be
-    \partial_{k_{\gamma}}g_{\alpha\beta}&=\Gamma_{\alpha\beta\gamma}+\Gamma_{\beta\alpha\gamma}.
+    \partial_{k_{\gamma}}g_{\alpha\beta}&=\Gamma_{\alpha\beta\gamma}+\Gamma_{\beta\alpha\gamma},
 \ee
-Using this relation, the coefficient can also be written as
+meaning that the quantum metric dipole is a symmetric part of the first two subindices of the Christoffel symbol. Using this relation, the coefficient can also be written as
 \be
     a_{\mu\alpha\beta}&=\frac{\tau Q^3}{\hbar^2}\varepsilon_{\mu\nu\delta}\int[\mathrm{d}\vb{k}]\pdv{f_0}{k_{\alpha}}\qty(\Gamma_{\delta\beta\nu}+\Gamma_{\beta\delta\nu}).\label{eq:coeff_chris}
 \ee
+\textcolor{blue}{comments to be made here?}
+
+Based on Eq.~\eqref{eq:coeff_metric}, we provide a symmetry analysis here. Unlike the nonlinear Hall effect~\cite{Liu_2021,Kamal_2023} caused by the quantum metric dipole, that requires breaking of both inversion and time-reversal symmetries, this effect can be present even in inversion or time-reversal symmetries. In particular, its presence in a time-reversal symmetric system makes it suited for experimental verification. These properties are due to the fact that the coefficient is given as a Fermi surface integration of the quantum metric, not Fermi sea integration in the case of the nonlinear Hall effect.
+
 
 \section{Model Calculation}
 Two-dimensional massive Dirac Hamiltonian
