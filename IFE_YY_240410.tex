@@ -35,7 +35,7 @@ Nonlinear optical effects--which arise from higher-order responses (second order
 
 In this letter, we unveil a novel mechanism of light-induced magnetization in electronic systems, mediated by quantum geometric effects. We consider spatially non-uniform light, characterized by an electric field with explicit position dependence. This spatial variation modifies the semiclassical equation of motion for electrons~\cite{Lapa_Hughes_2019}, which in turn alters the second-order current response derived from the Boltzmann transport equation. The resulting current, arising from the spatial inhomogeneity of the electric field, can be interpreted as a magnetization current, allowing us to derive an expression for light-induced magnetization as a second-order response to the electric field. This effect originates from Fermi surface contributions and is therefore relevant only in metallic systems. Remarkably, unlike the conventional inverse Faraday effect, it can be induced even by linearly polarized light. We further demonstrate the magnitude of this effect through a model calculation based on a simple Dirac Hamiltonian.
 
-We start from the semiclassical equation of motion of an electron under non-uniform electric field. Here we consider time-independent electric field \textcolor{blue}{under an assumption that the time variation of an electric field is slow enough}. Then, our setup is the same as in Ref.~\cite{Lapa_Hughes_2019}. The Hamiltonian of the system is given as
+We start from the semiclassical equation of motion of an electron under non-uniform electric field. Throughout this paper, we ignore the effect of magnetic field of light and concentrate on the electric field. Under such approximation, we can ignore the time-derivative of the vector potential by adopting appropriate gauge and the analysis is almost same as the one for time-independent electric field. Then, our setup is the same as in Ref.~\cite{Lapa_Hughes_2019}. The Hamiltonian of the system is given as
 \be
     \hat{H}&=\hat{H}_0+Q\varphi(\hat{\vb{x}}),
 \ee
@@ -81,9 +81,9 @@ where $\nabla$ is the derivative with respect to the real space coordinates. We 
 \ee
 Then, the magnetization current caused by this magnetization can be calculated as
 \be
-    j_{\mathrm{mag},\mu}(\vb{x}) &=-2\varepsilon_{\mu\nu\alpha}a_{\alpha\gamma\lambda}E_{\gamma}(\vb{x})\partial_{\nu}E_{\lambda}(\vb{x}).
+    j_{\mathrm{mag},\mu}(\vb{x}) &=-2\varepsilon_{\mu\nu\alpha}a_{\alpha\gamma\lambda}E_{\gamma}(\vb{x})e_{\lambda\nu},
 \ee
-\textcolor{blue}{We here focus on the current at the origin as a dominant contribution.} Then, the magnetization current can be written as
+up to the first order expansion of the electric field with respect to the position. Then, as $e_{\lambda\nu}=e_{\nu\lambda}$, the magnetization current can be written as
 \be
     j_{\mathrm{mag},\mu}&=-2\varepsilon_{\mu\nu\alpha}a_{\alpha\gamma\lambda}e_{\gamma}e_{\lambda\nu}.
 \ee
@@ -91,13 +91,13 @@ In the general expression of the current in Eq.~\eqref{eq:current_general}, the 
 \be
     \varepsilon_{\mu\nu\alpha}a_{\alpha\gamma\lambda}&=\frac{\tau Q^3}{4\hbar^2}\int[\mathrm{d}\vb{k}]\pdv{f_0}{k_{\gamma}}\pdv{g_{\nu\lambda}}{k_{\mu}}.
 \ee
-Thus, we get a formula of the coefficient defined in Eq.~\eqref{eq:M_def} for the IFE caused by the non-uniform electric fields as
+Integrating by parts, we get a formula of the coefficient defined in Eq.~\eqref{eq:M_def} for the IFE caused by the non-uniform electric fields as
 \be
-    a_{\mu\alpha\beta}&=\frac{\tau Q^3}{\hbar^2}\varepsilon_{\mu\nu\delta}\int[\mathrm{d}\vb{k}]\pdv{f_0}{k_{\alpha}}\pdv{g_{\delta\beta}}{k_{\nu}}\label{eq:coeff_metric}
+    a_{\mu\alpha\beta}&=-\frac{\tau Q^3}{\hbar^2}\varepsilon_{\mu\nu\delta}\int[\mathrm{d}\vb{k}]f_0\pdv[2]{g_{\delta\beta}}{k_{\alpha}}{k_{\nu}}\label{eq:coeff_metric}
 \ee
-This is our main result. Note that even when $\alpha=\beta$, where the illuminated light is linearly polarized, this effect, can be non-zero in general. This is a clear distinction from the conventional IFE, where magnetization can only be induced for circularly polarized light.
+This is our main result. This coefficient is proportional to a quadrupole-like quantity of the quantum metric $\int[\mathrm{d}\vb{k}]f_0\partial_{k_{\alpha}}\partial_{k_{\nu}}g_{\delta\beta}$, referred to as the \textit{quantum metric quadrupole}. This quantity has been studied in the context of third-order electric responses~. In our case, only the antisymmetric part of the quantum metric dipole is responsible for the generation of the IFE. Note that even when $\alpha=\beta$, where the illuminated light is linearly polarized, this effect, can be non-zero in general. This is a clear distinction from the conventional IFE, where magnetization can only be induced for circularly polarized light.
 
-We can rewrite the expression using the Christoffel symbol which highlights the quantum geometric nature of the effect. From the quantum metric, Christoffel symbol can be defined as
+We can rewrite the expression~\eqref{eq:coeff_metric} using the Christoffel symbol which highlights the connection between gravity and quantum geometric nature of the effect. From the quantum metric, Christoffel symbol can be defined as
 \be
     \Gamma_{\alpha\beta\gamma}&\coloneqq\frac{1}{2}\qty(\partial_{k_{\gamma}}g_{\alpha\beta}+\partial_{k_{\beta}}g_{\alpha\gamma}-\partial_{k_{\alpha}}g_{\beta\gamma}).
 \ee
@@ -105,22 +105,37 @@ Then, it is easy to see
 \be
     \partial_{k_{\gamma}}g_{\alpha\beta}&=\Gamma_{\alpha\beta\gamma}+\Gamma_{\beta\alpha\gamma},
 \ee
-meaning that the quantum metric dipole is a symmetric part of the first two subindices of the Christoffel symbol. Using this relation, the coefficient can also be written as
+meaning that the quantum metric dipole~\cite{Gao_positional_2014,Liu_2021,Kamal_2023,Gao_Science_2023} $\partial_{k_{\gamma}} g_{\alpha\beta}$ is a symmetric part of the first two subindices of the Christoffel symbol. Using this relation, the coefficient can also be written as
 \be
     a_{\mu\alpha\beta}&=\frac{\tau Q^3}{\hbar^2}\varepsilon_{\mu\nu\delta}\int[\mathrm{d}\vb{k}]\pdv{f_0}{k_{\alpha}}\qty(\Gamma_{\delta\beta\nu}+\Gamma_{\beta\delta\nu}).\label{eq:coeff_chris}
 \ee
-\textcolor{blue}{comments to be made here?}
+These findings demonstrate that the newly developed IFE can serve as a direct probe for determining Christoffel symbols in reciprocal space. Since only a limited number of physical phenomena have been proposed to enable such measurements, the IFE offers a distinct and promising approach for investigating the analogue gravity in momentum space.
+
+\textcolor{blue}{Equation~\eqref{eq:coeff_chris} further implies the connection of the IFE and a phenomenon in cosmology....}
 
 Based on Eq.~\eqref{eq:coeff_metric}, we provide a symmetry analysis here. Unlike the nonlinear Hall effect~\cite{Liu_2021,Kamal_2023} caused by the quantum metric dipole, that requires breaking of both inversion and time-reversal symmetries, this effect can be present even in inversion or time-reversal symmetries. In particular, its presence in a time-reversal symmetric system makes it suited for experimental verification. These properties are due to the fact that the coefficient is given as a Fermi surface integration of the quantum metric, not Fermi sea integration in the case of the nonlinear Hall effect.
 
-
-\section{Model Calculation}
-Two-dimensional massive Dirac Hamiltonian
+Next, we provide a model calculation of the IFE to see the basic properties of the effect and to give an estimate of the size of the effect for experimental verification. We introduce a two-dimensional massive Dirac model as
 \be
-    H(k_x,k_y)&=k_x\sigma_x+k_y\sigma_y+M\sigma_z
+    H(k_x,k_y,M)&=v\qty(k_x\sigma_x+k_y\sigma_y)+M\sigma_z,
 \ee
+where $\sigma_i\ (i=x,y,z)$ are Pauli matrices, $M$ is the mass-gap parameter. Because derivatives with second- and higher orders vanish for this system, we can explicitly calculate the quantum metric quadrupole density as
+\be
+    \partial_{\mu}\partial_{\nu}g_{\alpha\beta} =& -\frac{1}{4\epsilon^4}\qty(2\delta_{\alpha\beta}\delta_{\mu\nu}+\delta_{\alpha\mu}\delta_{\beta\nu}+\delta_{\alpha\nu}\delta_{\beta\mu})\nonumber\\
+    &+\frac{1}{\epsilon^6}(2k_{\mu}k_{\nu}\delta_{\alpha\beta}+k_{\beta}k_{\nu}\delta_{\alpha\mu}+k_{\mu}k_{\beta}\delta_{\alpha\nu}\nonumber\\
+    &+k_{\alpha}k_{\nu}\delta_{\beta\mu}+k_{\alpha}k_{\mu}\delta_{\beta\nu}+k_{\alpha}k_{\beta}\delta_{\mu\nu}),\label{eq:quadrupole_density}
+\ee
+where $\epsilon = \sqrt{k_x^2+k_y^2+(M/v)^2}$ and $\alpha,\beta,\mu$, and $\nu$ are $x$ or $y$ as the system is two-dimensional. At the origin, quantum metric quadrupole density diverges as $M^{-4}$. We plot $\varepsilon_{\mu\nu\delta}\partial_{\alpha},\partial_{\nu}g_{\delta\beta}$ for $\mu=z$ and $\alpha\beta=x,y$ in Fig.~\ref{fig:asym_density}. When $\alpha=\beta$, the integrand of Eq.~\eqref{eq:coeff_metric} becomes an odd function of $k_x$ and $k_y$ and thus, $a_{\mu\alpha\alpha}=0$ for this model. However, this does not restrict the IFE to react only to the circularly polarized light. We can see from $(\alpha,\beta) = (x,y)$ (Fig.~\ref{fig:asym_density}(b)) and $(y,x)$ (Fig.~\ref{fig:asym_density}(c)) that $a_{zxy}$ has both symmetric and anti-symmetric parts, which correspond to the linearly and circularly polarized lights, respectively. Therefore, even for simple massive Dirac model, the IFE is present irrelevant with the polarization of the light.
 
+\begin{figure}[t]
+    \begin{center}
+        \includegraphics[width=\columnwidth]{fig_IFE/asym_density.pdf}
+    \end{center}
+    \caption{Values of $\varepsilon_{z\nu\delta}\partial_{\alpha}\partial_{\nu}g_{\delta\beta}$ around $(k_x,k_y)=(0,0)$ for the parameter $M/v=0.5$ with $(\alpha,\beta)=$ (a) $(x,x)$, (b) $(x,y)$, (c) $(y,x)$, and (d) $(y,y)$.}
+    \label{fig:asym_density}
+\end{figure}
 
+Next, we investigate the dependence of the coefficient as a function of $M/v$ and estimate the magnitude of the IFE. As we can see in Eq.~\eqref{eq:quadrupole_density}, $a_{zxy}$ and $a_{zyx}$ are non-zero and others are zero for the current model. We define the symmetric part and anti-symmetric parts of $a_{\mu\alpha\beta}$ as $a_{\mu(\alpha\beta)}\coloneqq (a_{\mu\alpha\beta}+a_{\mu\beta\alpha})/2$ and $a_{\mu[\alpha\beta]}\coloneqq (a_{\mu\alpha\beta}-a_{\mu\beta\alpha})/2$, respectively. In Fig.~, we plot $a_{z(xy)}$ and $a_{z[xy]}$ as functions of the Fermi energy $\epsilon_\mathrm{F}$ at zero-temperature limit for several values of $M/v$. 
 
 \bibliography{IFE.bib}
 

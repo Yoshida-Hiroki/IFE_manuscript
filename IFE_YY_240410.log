@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.26 (TeX Live 2024) (preloaded format=pdflatex 2024.5.16)  17 APR 2025 13:10
+This is pdfTeX, Version 3.141592653-2.6-1.40.26 (TeX Live 2024) (preloaded format=pdflatex 2024.5.16)  12 MAY 2025 22:06
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -468,37 +468,45 @@ Underfull \hbox (badness 1622) in paragraph at lines 50--54
 [] [][]=
  []
 
-
+[1{c:/texlive/2024/texmf-var/fonts/map/pdftex/updmap/pdftex.map}]
 Overfull \hbox (8.22816pt too wide) detected at line 54
 []
  []
 
-[1{c:/texlive/2024/texmf-var/fonts/map/pdftex/updmap/pdftex.map}] [2] (./IFE_YY_240410.bbl
+[2]
+
+pdfTeX warning: pdflatex.exe (file ./fig_IFE/asym_density.pdf): PDF inclusion: found PDF version <1.6>, but at most version <1.5> allowed
+<fig_IFE/asym_density.pdf, id=103, 369.09595pt x 242.04126pt>
+File: fig_IFE/asym_density.pdf Graphic file (type pdf)
+<use fig_IFE/asym_density.pdf>
+Package pdftex.def Info: fig_IFE/asym_density.pdf  used on input line 132.
+(pdftex.def)             Requested size: 246.0pt x 161.31734pt.
+(./IFE_YY_240410.bbl [3 <./fig_IFE/asym_density.pdf>]
 Underfull \hbox (badness 1320) in paragraph at lines 54--55
  []\OT1/cmr/m/n/9 M. Fara-day, Ex-per-i-men-tal re-searches in electricity.--
  []
 
-) [3] (./IFE_YY_240410.aux)
+) [4] (./IFE_YY_240410.aux)
  ***********
 LaTeX2e <2023-11-01> patch level 1
 L3 programming layer <2024-04-11>
  ***********
 Package rerunfilecheck Info: File `IFE_YY_240410.out' has not changed.
-(rerunfilecheck)             Checksum: 7408E2634B70D21F29B018E6EE12F9C2;675.
+(rerunfilecheck)             Checksum: BAFD543A4CC87AFF9BEF8A34035E9E7D;533.
  ) 
 Here is how much of TeX's memory you used:
- 14804 strings out of 474050
- 225624 string characters out of 5746298
- 1964754 words of memory out of 5000000
- 37005 multiletter control sequences out of 15000+600000
- 566885 words of font info for 69 fonts, out of 8000000 for 9000
+ 14825 strings out of 474050
+ 226149 string characters out of 5746298
+ 1969754 words of memory out of 5000000
+ 37023 multiletter control sequences out of 15000+600000
+ 567231 words of font info for 70 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 79i,13n,93p,2397b,521s stack positions out of 10000i,1000n,20000p,200000b,200000s
-<c:/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmbsy10.pfb><c:/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb><c:/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb><c:/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx7.pfb><c:/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx9.pfb><c:/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb><c:/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb><c:/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi5.pfb><c:/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi7.pfb><c:/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb><c:/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmr5.pfb><c:/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmr6.pfb><c:/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb><c:/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmr9.pfb><c:/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb><c:/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb><c:/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmti9.pfb><c:/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb>
-Output written on IFE_YY_240410.pdf (3 pages, 227757 bytes).
+ 79i,13n,93p,2397b,616s stack positions out of 10000i,1000n,20000p,200000b,200000s
+<c:/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmbsy10.pfb><c:/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb><c:/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb><c:/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx7.pfb><c:/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx9.pfb><c:/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb><c:/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb><c:/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi5.pfb><c:/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi7.pfb><c:/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb><c:/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmr5.pfb><c:/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmr6.pfb><c:/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb><c:/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmr9.pfb><c:/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb><c:/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb><c:/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmti10.pfb><c:/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmti9.pfb><c:/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb>
+Output written on IFE_YY_240410.pdf (4 pages, 910295 bytes).
 PDF statistics:
- 234 PDF objects out of 1000 (max. 8388607)
- 190 compressed objects within 2 object streams
- 46 named destinations out of 1000 (max. 500000)
- 33 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 260 PDF objects out of 1000 (max. 8388607)
+ 210 compressed objects within 3 object streams
+ 48 named destinations out of 1000 (max. 500000)
+ 30 words of extra memory for PDF output out of 10000 (max. 10000000)
 
