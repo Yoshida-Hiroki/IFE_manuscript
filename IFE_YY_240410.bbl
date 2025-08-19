@@ -6,7 +6,7 @@
 %Control: page (0) single
 %Control: year (1) truncated
 %Control: production of eprint (0) enabled
-\begin{thebibliography}{21}%
+\begin{thebibliography}{22}%
 \makeatletter
 \providecommand \@ifxundefined [1]{%
  \@ifx{#1\undefined}
@@ -112,4 +112,7 @@
 \bibitem [{\citenamefont {Provost}\ and\ \citenamefont {Vallee}(1980)}]{Provost_1980}%
   \BibitemOpen
   \bibfield  {author} {\bibinfo {author} {\bibfnamefont {J.~P.}\ \bibnamefont {Provost}}\ and\ \bibinfo {author} {\bibfnamefont {G.}~\bibnamefont {Vallee}},\ }\bibfield  {title} {\bibinfo {title} {{Riemannian structure on manifolds of quantum states}},\ }\href {https://doi.org/10.1007/BF02193559} {\bibfield  {journal} {\bibinfo  {journal} {Commun. Math. Phys.}\ }\textbf {\bibinfo {volume} {76}},\ \bibinfo {pages} {289} (\bibinfo {year} {1980})}\BibitemShut {NoStop}%
+\bibitem [{\citenamefont {Liu}\ \emph {et~al.}(2025)\citenamefont {Liu}, \citenamefont {Wang}, \citenamefont {Li}, \citenamefont {Zhao}, \citenamefont {Liao},\ and\ \citenamefont {Liao}}]{Liu_2025_metric_quadrupole}%
+  \BibitemOpen
+  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {X.-Y.}\ \bibnamefont {Liu}}, \bibinfo {author} {\bibfnamefont {A.-Q.}\ \bibnamefont {Wang}}, \bibinfo {author} {\bibfnamefont {D.}~\bibnamefont {Li}}, \bibinfo {author} {\bibfnamefont {T.-Y.}\ \bibnamefont {Zhao}}, \bibinfo {author} {\bibfnamefont {X.}~\bibnamefont {Liao}},\ and\ \bibinfo {author} {\bibfnamefont {Z.-M.}\ \bibnamefont {Liao}},\ }\bibfield  {title} {\bibinfo {title} {{Giant Third-Order Nonlinearity Induced by the Quantum Metric Quadrupole in Few-Layer ${\mathrm{WTe}}_{2}$}},\ }\href {https://doi.org/10.1103/PhysRevLett.134.026305} {\bibfield  {journal} {\bibinfo  {journal} {Phys. Rev. Lett.}\ }\textbf {\bibinfo {volume} {134}},\ \bibinfo {pages} {026305} (\bibinfo {year} {2025})}\BibitemShut {NoStop}%
 \end{thebibliography}%

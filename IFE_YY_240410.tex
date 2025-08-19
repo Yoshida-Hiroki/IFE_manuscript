@@ -1,5 +1,5 @@
 \documentclass[aps,prb,longbibliography,superscriptaddress,twocolumn]{revtex4-2}
-\usepackage{graphicx,caption}
+\usepackage{graphicx}
 \usepackage{mathtools,amsmath,amssymb}
 \usepackage{physics}
 \usepackage{here}
@@ -24,7 +24,7 @@
 
 
 \begin{abstract}
-    We propose a novel mechanism of the inverse Faraday effect arising from a quantum geometric origin, characterized by the quantum metric dipole. Within a semiclassical framework based on the Boltzmann transport theory, we establish a general formalism describing light-induced magnetization in electronic systems as a second-order nonlinear response to the electric field of light. We show that this effect is activated by a spatially non-uniform electric field component and, in contrast to the conventional inverse Faraday effect, persists even under linearly polarized illumination. Model calculations reveal that the magnitude of the resulting magnetization is comparable to that induced in conventional inverse Faraday effect by circularly polarized light, indicating its experimental realizability. Our results highlight a direct manifestation of the quantum metric dipole in nonlinear optical responses and suggest a viable pathway for its experimental detection.
+    We propose a novel mechanism of the inverse Faraday effect arising from a quantum geometric origin, characterized by the quantum metric quadrupole. Within a semiclassical framework based on the Boltzmann transport theory, we establish a general formalism describing light-induced magnetization in electronic systems as a second-order nonlinear response to the electric field of light. We show that this effect is activated by a spatially non-uniform electric field component and, in contrast to the conventional inverse Faraday effect, persists even under linearly polarized illumination. Model calculations reveal that the magnitude of the resulting magnetization is comparable to that induced in conventional inverse Faraday effect by circularly polarized light, indicating its experimental realizability. Our results highlight a direct manifestation of the quantum metric dipole in nonlinear optical responses and suggest a viable pathway for its experimental detection.
 \end{abstract}
 
 \maketitle
@@ -39,7 +39,7 @@ We start from the semiclassical equation of motion of an electron under non-unif
 \be
     \hat{H}&=\hat{H}_0+Q\varphi(\hat{\vb{x}}),
 \ee
-where $\hat{H}_0$ is a static Hamiltonian including a periodic potential, $Q=-e$ is the charge of an electron, and $\phi$ is a scalar potential that gives the electric field $E_{\mu}=-\pdv{\varphi}{x_{\mu}}\ (\mu=x,y,z)$. We expand the position-dependent electric field $\vb{E}(\vb{x})$ around the origin as 
+where $\hat{H}_0$ is a static Hamiltonian including a periodic potential, $Q=-e$ is the charge of an electron, and $\varphi$ is a scalar potential that gives the electric field $E_{\mu}=-\pdv{\varphi}{x_{\mu}}\ (\mu=x,y,z)$. We expand the position-dependent electric field $\vb{E}(\vb{x})$ around the origin as 
 \be
     E_{\mu}(\vb{x})&=e_{\mu}+e_{\mu\nu}x_{\nu},
 \ee
@@ -54,22 +54,22 @@ Here, $\varepsilon$ is the energy of the electron satisfying $\hat{H}_0\ket{\phi
 \ee
 is the quantum metric. These two quantities correspond to the imaginary and real parts of the quantum geometric tensor~\cite{Provost_1980}, respectively. In the equations of motion, the first term of Eq.~\eqref{eq:EOM_x} is the conventional term showing the group velocity. Equation~\eqref{eq:EOM_k} and the second term of Eq.~\eqref{eq:EOM_x} include the effect of an applied electric field. The third term of Eq.~\eqref{eq:EOM_x} is unique to the non-uniform electric field.
 
-From the EOMs, we next calculate the electric current density of this system using the Boltzmann formalism. The Boltzmann equation with relaxation time approximation can be written as
+From the EOMs, we next calculate the electric current density of this system using the Boltzmann formalism. The Boltzmann equation with the relaxation time approximation can be written as
 \be
     \pdv{f}{t}+\dot{\vb{x}}\cdot\pdv{f}{\vb{x}}+\dot{\vb{k}}\cdot\pdv{f}{\vb{k}}=-\frac{f-f_0}{\tau},
 \ee
 where $f$ is the distribution function of the system, $f_0$ is the equilibrium Fermi distribution function, and $\tau$ is the relaxation time of an electron. We calculate the change of the distribution function $f-f_0$ up to a first order of $\tau$. In this case, $f$ in the left hand side can be approximated to be $f_0$. Using facts that the state is in equilibrium $\pdv{f_0}{t}=0$ and uniform $\pdv{f_0}{\vb{x}}=\vb{0}$, we get
 \be
-    f&\approx f_0+\frac{\tau Q}{\hbar}E_{\mu}(\vb{x})\pdv{f_0}{k_{\mu}}.
+    f&\approx f_0-\frac{\tau Q}{\hbar}E_{\mu}(\vb{x})\pdv{f_0}{k_{\mu}}.
 \ee
 This distribution function has the same form as the one under a uniform electric field. Using this distribution function, the electric current density $j_{\mu}\coloneqq Q\int[\mathrm{d}\vb{k}]f\dot{x}_{\mu}$ can be calculated as
 \begin{widetext}
     \be
-        j_{\mu}&=\frac{Q}{\hbar}\int[\mathrm{d}\vb{k}]f_0\pdv{\varepsilon}{k_{\mu}}+\qty(\frac{\tau Q^2}{\hbar^2}\int[\mathrm{d}\vb{k}]\pdv{f_0}{k_{\nu}}\pdv{\varepsilon}{k_{\mu}}-\frac{Q^2}{\hbar}\int[\mathrm{d}\vb{k}]f_0\Omega_{\mu\nu})E_{\nu}(\vb{x})-\frac{Q^2}{2\hbar}\int[\mathrm{d}\vb{k}]f_0\pdv{g_{\nu\lambda}}{k_{\mu}}e_{\nu\lambda}\nonumber\\
-        &\hspace{7cm} -\frac{\tau Q^3}{\hbar^2}\int[\mathrm{d}\vb{k}]\pdv{f_0}{k_{\nu}}\Omega_{\mu\gamma}E_{\nu}E_{\gamma}-\frac{\tau Q^3}{2\hbar^2}\int[\mathrm{d}\vb{k}]\pdv{f_0}{k_{\gamma}}\pdv{g_{\nu\lambda}}{k_{\mu}}E_{\gamma}e_{\nu\lambda}.\label{eq:current_general}
+        j_{\mu}&=\frac{Q}{\hbar}\int[\mathrm{d}\vb{k}]f_0\pdv{\varepsilon}{k_{\mu}}-\qty(\frac{\tau Q^2}{\hbar^2}\int[\mathrm{d}\vb{k}]\pdv{f_0}{k_{\nu}}\pdv{\varepsilon}{k_{\mu}}+\frac{Q^2}{\hbar}\int[\mathrm{d}\vb{k}]f_0\Omega_{\mu\nu})E_{\nu}(\vb{x})-\frac{Q^2}{2\hbar}\int[\mathrm{d}\vb{k}]f_0\pdv{g_{\nu\lambda}}{k_{\mu}}e_{\nu\lambda}\nonumber\\
+        &\hspace{7cm} +\frac{\tau Q^3}{\hbar^2}\int[\mathrm{d}\vb{k}]\pdv{f_0}{k_{\nu}}\Omega_{\mu\gamma}E_{\nu}E_{\gamma}+\frac{\tau Q^3}{2\hbar^2}\int[\mathrm{d}\vb{k}]\pdv{f_0}{k_{\gamma}}\pdv{g_{\nu\lambda}}{k_{\mu}}E_{\gamma}e_{\nu\lambda}.\label{eq:current_general}
     \ee
 \end{widetext}
-Here, $\qty[\mathrm{d}\vb{k}] = \frac{\mathrm{d}\vb{k}}{(2\pi)^d}$ with the dimension of the system $d$ and the integration is over the whole Brillouin zone. The first three terms in Eq.~\eqref{eq:current_general} represent conventional currents caused by the application of an electric field. In Ref.~\cite{Lapa_Hughes_2019}, the fourth term is referred as the ``geometric'' current. This geometric current is caused by the gradient of the electric field and quantum metric. Using integration by parts, this current can be calculated as a Fermi surface integration of the quantum metric. The last two terms are the second-order response to the applied electric field. They are represented also as Fermi surface integrations of Berry curvature and the derivative of the quantum metric (metric dipole), respectively and thus, only present in metallic systems.
+Here, $\qty[\mathrm{d}\vb{k}] = \frac{\mathrm{d}\vb{k}}{(2\pi)^d}$ with the dimension of the system $d$ and the integration is over the whole Brillouin zone. The first three terms in Eq.~\eqref{eq:current_general} represent conventional currents caused by the application of an electric field. In Ref.~\cite{Lapa_Hughes_2019}, the fourth term is referred as the ``geometric'' current. This geometric current is caused by the gradient of the electric field and quantum metric. Using integration by parts, this current can be calculated as a Fermi surface integration of the quantum metric. The last two terms are the second-order response to the applied electric field. They are represented also as Fermi surface integrations of Berry curvature and the derivative of the quantum metric, respectively.
 
 We next turn our attention to the magnetization. In a system with magnetization $\vb{M}$, the associated magnetization current is defined as
 \be
@@ -81,21 +81,17 @@ where $\nabla$ is the derivative with respect to the real space coordinates. We 
 \ee
 Then, the magnetization current caused by this magnetization can be calculated as
 \be
-    j_{\mathrm{mag},\mu}(\vb{x}) &=-2\varepsilon_{\mu\nu\alpha}a_{\alpha\gamma\lambda}E_{\gamma}(\vb{x})e_{\lambda\nu},
+    j_{\mathrm{mag},\mu}(\vb{x}) &=2\varepsilon_{\mu\nu\alpha}a_{\alpha\gamma\lambda}E_{\gamma}(\vb{x})e_{\lambda\nu},
 \ee
-up to the first order expansion of the electric field with respect to the position. Then, as $e_{\lambda\nu}=e_{\nu\lambda}$, the magnetization current can be written as
-\be
-    j_{\mathrm{mag},\mu}&=-2\varepsilon_{\mu\nu\alpha}a_{\alpha\gamma\lambda}e_{\gamma}e_{\lambda\nu}.
-\ee
-In the general expression of the current in Eq.~\eqref{eq:current_general}, the last term has the same form as this current, depending on the zeroth- and first-order derivatives of the electric field. Therefore, the last term of Eq.~\eqref{eq:current_general} can be understood as a magnetization current caused by a magnetization $\vb{M}$ induced by the light, i.e. by IFE. By comparing two expressions, we find
+up to the first order expansion of the electric field with respect to the position. In the general expression of the current in Eq.~\eqref{eq:current_general}, the last term has the same form as this current. Therefore, the last term of Eq.~\eqref{eq:current_general} can be understood as a magnetization current caused by a magnetization $\vb{M}$ induced by the light, i.e. by IFE. By comparing two expressions, we find
 \be
     \varepsilon_{\mu\nu\alpha}a_{\alpha\gamma\lambda}&=\frac{\tau Q^3}{4\hbar^2}\int[\mathrm{d}\vb{k}]\pdv{f_0}{k_{\gamma}}\pdv{g_{\nu\lambda}}{k_{\mu}}.
 \ee
 Integrating by parts, we get a formula of the coefficient defined in Eq.~\eqref{eq:M_def} for the IFE caused by the non-uniform electric fields as
 \be
-    a_{\mu\alpha\beta}&=-\frac{\tau Q^3}{\hbar^2}\varepsilon_{\mu\nu\delta}\int[\mathrm{d}\vb{k}]f_0\pdv[2]{g_{\delta\beta}}{k_{\alpha}}{k_{\nu}}\label{eq:coeff_metric}
+    a_{\mu\alpha\beta}&=-\frac{\tau Q^3}{8\hbar^2}\varepsilon_{\mu\nu\delta}\int[\mathrm{d}\vb{k}]f_0\pdv[2]{g_{\delta\beta}}{k_{\alpha}}{k_{\nu}}\label{eq:coeff_metric}
 \ee
-This is our main result. This coefficient is proportional to a quadrupole-like quantity of the quantum metric $\int[\mathrm{d}\vb{k}]f_0\partial_{k_{\alpha}}\partial_{k_{\nu}}g_{\delta\beta}$, referred to as the \textit{quantum metric quadrupole}. This quantity has been studied in the context of third-order electric responses~. In our case, only the antisymmetric part of the quantum metric dipole is responsible for the generation of the IFE. Note that even when $\alpha=\beta$, where the illuminated light is linearly polarized, this effect, can be non-zero in general. This is a clear distinction from the conventional IFE, where magnetization can only be induced for circularly polarized light.
+This is our main result. This coefficient is proportional to a quadrupole-like quantity of the quantum metric $\int[\mathrm{d}\vb{k}]f_0\partial_{k_{\alpha}}\partial_{k_{\nu}}g_{\delta\beta}$, referred to as the \textit{quantum metric quadrupole}. This quantity has been studied in the context of third-order electric responses~\cite{Liu_2025_metric_quadrupole}. Note that even when $\alpha=\beta$, where the illuminated light is linearly polarized, this effect, can be non-zero in general. This is a clear distinction from the conventional IFE, where magnetization can only be induced for circularly polarized light.
 
 We can rewrite the expression~\eqref{eq:coeff_metric} using the Christoffel symbol which highlights the connection between gravity and quantum geometric nature of the effect. From the quantum metric, Christoffel symbol can be defined as
 \be
@@ -107,17 +103,17 @@ Then, it is easy to see
 \ee
 meaning that the quantum metric dipole~\cite{Gao_positional_2014,Liu_2021,Kamal_2023,Gao_Science_2023} $\partial_{k_{\gamma}} g_{\alpha\beta}$ is a symmetric part of the first two subindices of the Christoffel symbol. Using this relation, the coefficient can also be written as
 \be
-    a_{\mu\alpha\beta}&=\frac{\tau Q^3}{\hbar^2}\varepsilon_{\mu\nu\delta}\int[\mathrm{d}\vb{k}]\pdv{f_0}{k_{\alpha}}\qty(\Gamma_{\delta\beta\nu}+\Gamma_{\beta\delta\nu}).\label{eq:coeff_chris}
+    a_{\mu\alpha\beta}&=\frac{\tau Q^3}{8\hbar^2}\varepsilon_{\mu\nu\delta}\int[\mathrm{d}\vb{k}]\pdv{f_0}{k_{\alpha}}\qty(\Gamma_{\delta\beta\nu}+\Gamma_{\beta\delta\nu}).\label{eq:coeff_chris}
 \ee
 These findings demonstrate that the newly developed IFE can serve as a direct probe for determining Christoffel symbols in reciprocal space. Since only a limited number of physical phenomena have been proposed to enable such measurements, the IFE offers a distinct and promising approach for investigating the analogue gravity in momentum space.
 
-\textcolor{blue}{Equation~\eqref{eq:coeff_chris} further implies the connection of the IFE and a phenomenon in cosmology....}
+% \textcolor{blue}{Equation~\eqref{eq:coeff_chris} further implies the connection of the IFE and a phenomenon in cosmology....}
 
 Based on Eq.~\eqref{eq:coeff_metric}, we provide a symmetry analysis here. Unlike the nonlinear Hall effect~\cite{Liu_2021,Kamal_2023} caused by the quantum metric dipole, that requires breaking of both inversion and time-reversal symmetries, this effect can be present even in inversion or time-reversal symmetries. In particular, its presence in a time-reversal symmetric system makes it suited for experimental verification. These properties are due to the fact that the coefficient is given as a Fermi surface integration of the quantum metric, not Fermi sea integration in the case of the nonlinear Hall effect.
 
 Next, we provide a model calculation of the IFE to see the basic properties of the effect and to give an estimate of the size of the effect for experimental verification. We introduce a two-dimensional massive Dirac model as
 \be
-    H(k_x,k_y,M)&=v\qty(k_x\sigma_x+k_y\sigma_y)+M\sigma_z,
+    H(k_x,k_y,M)&=\hbar v\qty(k_x\sigma_x+k_y\sigma_y)+M\sigma_z,
 \ee
 where $\sigma_i\ (i=x,y,z)$ are Pauli matrices, $M$ is the mass-gap parameter. Because derivatives with second- and higher orders vanish for this system, we can explicitly calculate the quantum metric quadrupole density as
 \be
@@ -143,5 +139,24 @@ In this work, (conclusion)
 We thank Teruaki Suyama, So Tanaka, and Ryutaro Tomomatsu for useful discussions and comments. HY is supported by Japan Society for the Promotion of Science (JSPS) KAKENHI Grant Number JP24KJ1109 and by MEXT Initiative to Establish Next-generation Novel Integrated Circuits Centers (X-NICS) Grant Number JPJ011438. TY is supported by Japan Society for the Promotion of Science (JSPS) KAKENHI Grant Numbers 25K07221 and JP30578216.
 
 \bibliography{IFE.bib}
+
+\begin{widetext}
+\section*{End Matter}
+
+Quantum metric quadrupole for general two-level systems with Hamiltonian of the form $H=h_0\sigma_0+\vb{h}\cdot\boldsymbol{\sigma}$, where $\sigma_0$ is an identity matrix and $\boldsymbol{\sigma}$ is a vector of Pauli matrices is given by
+\be
+\partial_{\alpha}\partial_{\nu}g_{\delta\beta}&=\frac{\partial_{\alpha}h\partial_{\nu}h}{2h^4}\qty(\partial_{\delta}h_i\partial_{\beta}h_i-\partial_{\delta}h\partial_{\beta}h)-\frac{\partial_{\alpha}\partial_{\nu}h}{2h^3}\qty(\partial_{\delta}h_i\partial_{\beta}h_i-\partial_{\delta}h\partial_{\beta}h)+\frac{1}{4h^2}\partial_{\alpha}\partial_{\nu}\qty(\partial_{\delta}h_i\partial_{\beta}h_i-\partial_{\delta}h\partial_{\beta}h)\nonumber\\
+&\quad -\frac{\partial_{\alpha}h}{2h^3}\partial_{\nu}\qty(\partial_{\delta}h_i\partial_{\beta}h_i-\partial_{\delta}h\partial_{\beta}h)-\frac{\partial_{\nu}h}{2h^3}\partial_{\alpha}\qty(\partial_{\delta}h_i\partial_{\beta}h_i-\partial_{\delta}h\partial_{\beta}h).
+\ee
+Using this expression, for the model in Eq.~(), the coefficients $a_{z\alpha\beta}$ can be straightforwardly calculated as
+\be
+    \frac{a_{zxx}}{k_F^4}&=-\frac{\tilde{k}_y \qty(2 a \tilde{k}_x+1) \left\{3a\qty(a\tilde{k}_x^2+\tilde{k}_x)^2+2\qty(a\tilde{k}_x^2+\tilde{k}_x)-a\qty(\tilde{k}_y^2+\tilde{M}^2)\right\}}{2 \left\{\qty(a\tilde{k}_x^2+\tilde{k}_x)^2+\tilde{k}_y^2+\tilde{M}^2\right\}^3},\\
+    \frac{a_{zxy}}{k_F^4}&=\frac{10 a\qty(a\tilde{k}_x^2+\tilde{k}_x)^3+3\qty(a\tilde{k}_x^2+\tilde{k}_x)^2-6a\qty(a\tilde{k}_x^2+\tilde{k}_x)\qty(\tilde{k}_y^2+\tilde{M}^2)-\qty(\tilde{k}_y^2+\tilde{M}^2)}{4 \left\{\qty(a\tilde{k}_x^2+\tilde{k}_x)^2+\tilde{k}_y^2+\tilde{M}^2\right\}^3},\\
+    \frac{a_{zyx}}{k_F^4}&=\frac{\left\{2a\qty(a\tilde{k}_x^2+\tilde{k}_x)+1\right\}\left\{\qty(a\tilde{k}_x^2+\tilde{k}_x)^2-3\tilde{k}_y^2+\tilde{M}^2\right\}}{4 \left\{\qty(a\tilde{k}_x^2+\tilde{k}_x)^2+\tilde{k}_y^2+\tilde{M}^2\right\}^3},\\
+    \frac{a_{zyy}}{k_F^4}&=\frac{\tilde{k}_x \tilde{k}_y \left\{2a\qty(a\tilde{k}_x^2+\tilde{k}_x)+a\tilde{k}_x+1\right\}}{\left\{\qty(a\tilde{k}_x^2+\tilde{k}_x)^2+\tilde{k}_y^2+\tilde{M}^2\right\}^3},
+\ee
+where $a=\alpha k_F$, $\tilde{k}_i=k_i/k_F$, and $\tilde{M}=M/(\hbar k_Fv)$.
+
+\end{widetext}
 
 \end{document}
