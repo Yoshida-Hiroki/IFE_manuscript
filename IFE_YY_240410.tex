@@ -6,6 +6,7 @@
 \usepackage{multirow}
 \usepackage{xcolor}
 \usepackage{hyperref}
+\usepackage{bm}
 
 \def\be#1\ee{\begin{align}#1\end{align}}
 
@@ -33,13 +34,21 @@ The Faraday effect is one of the most prominent magneto-optical phenomena, chara
 
 Nonlinear optical effects--which arise from higher-order responses (second order or above) to the electric and magnetic fields of light--have garnered growing theoretical interest in recent years. This attention is largely driven by their profound connection to quantum geometry. A paradigmatic example is the bulk photovoltaic effect~\cite{kraut.vonbaltz1979a,belinicher.sturman1980,vonbaltz.kraut1981a,aversa.sipe1995a,sipe.shkrebtii2000,fridkin2001}, a second-order response to the electric field, where the nonlinear conductivity can be expressed in terms of geometric quantities such as the Berry curvature~\cite{morimoto.nagaosa2016,morimoto.nagaosa2016b,ma.etal2021,ahn.etal2022}. Other nonlinear transport phenomena, such as the nonlinear Hall effect is known to be related with the Berry curvature dipole~\cite{Fu_2015}. Also, different geometric quantity known as a quantum metric dipole can appear in nonlinear Hall effect~\cite{Gao_positional_2014,Liu_2021,Kamal_2023,Gao_Science_2023}. Nevertheless, the influence of quantum geometry on the inverse Faraday effect remains largely unexplored.
 
-In this letter, we unveil a novel mechanism of light-induced magnetization in electronic systems, mediated by quantum geometric effects. We consider spatially non-uniform light, characterized by an electric field with explicit position dependence. This spatial variation modifies the semiclassical equation of motion for electrons~\cite{Lapa_Hughes_2019}, which in turn alters the second-order current response derived from the Boltzmann transport equation. The resulting current, arising from the spatial inhomogeneity of the electric field, can be interpreted as a magnetization current, allowing us to derive an expression for light-induced magnetization as a second-order response to the electric field. This effect originates from Fermi surface contributions and is therefore relevant only in metallic systems. Remarkably, unlike the conventional inverse Faraday effect, it can be induced even by linearly polarized light. We further demonstrate the magnitude of this effect through a model calculation based on a simple Dirac Hamiltonian.
+In this letter, we unveil a mechanism of light-induced magnetization in electronic systems, mediated by quantum geometric effects. We consider spatially non-uniform light, characterized by an electric field with explicit position dependence. This spatial variation modifies the semiclassical equation of motion for electrons~\cite{Lapa_Hughes_2019}, which in turn alters the second-order current response derived from the Boltzmann transport equation. The resulting current, arising from the spatial inhomogeneity of the electric field, can be interpreted as a magnetization current, allowing us to derive an expression for light-induced magnetization as a second-order response to the electric field. This effect originates from Fermi surface contributions and is therefore relevant only in metallic systems. Remarkably, unlike the conventional inverse Faraday effect, it can be induced even by linearly polarized light. We further demonstrate the magnitude of this effect through a model calculation based on a simple Dirac Hamiltonian.
 
-We start from the semiclassical equation of motion of an electron under non-uniform electric field. Throughout this paper, we ignore the effect of magnetic field of light and concentrate on the electric field. Under such approximation, we can ignore the time-derivative of the vector potential by adopting appropriate gauge and the analysis is almost same as the one for time-independent electric field. Then, our setup is the same as in Ref.~\cite{Lapa_Hughes_2019}. The Hamiltonian of the system is given as
+We start from the semiclassical equation of motion of an electron under non-uniform electric field. Throughout this paper, we ignore the effect of magnetic field of light and concentrate on the electric field. We express the oscillating electric field by a complex field \(\tilde{E}\) as
 \be
-    \hat{H}&=\hat{H}_0+Q\varphi(\hat{\vb{x}}),
+    E_{\mu}(\bm{r},t)&=\Re\left[\tilde{E}_{\mu}(\bm{r})e^{i\omega t}\right]\quad\left(\tilde{E}_{\mu}\in\mathbb{C}\right),
 \ee
-where $\hat{H}_0$ is a static Hamiltonian including a periodic potential, $Q=-e$ is the charge of an electron, and $\varphi$ is a scalar potential that gives the electric field $E_{\mu}=-\pdv{\varphi}{x_{\mu}}\ (\mu=x,y,z)$. We expand the position-dependent electric field $\vb{E}(\vb{x})$ around the origin as 
+where \(\mu=x,y,z\) and the electric field is assumed to be oscillating in a single frequency \(\omega\). Using scalar and vector potentials, this electric field can be written as
+\be
+    \bm{E}(\bm{r},t)&=-\nabla\phi(\bm{r},t)-\frac{\partial\bm{A}(\bm{r},t)}{\partial t}.
+\ee
+The Hamiltonian of the system is
+\be
+    \hat{H}&=H_0\left[\bm{q}-Q\bm{A}(\hat{\bm{r}},t)\right]+Q\phi(\hat{\vb{r}},t),
+\ee
+where $\hat{H}_0(\bm{q})$ is a static Hamiltonian including a periodic potential and $Q=-e$ is the charge of an electron. The semiclassical wave-packet dynamics of a system with this Hamiltonian is already studied in Ref.~\cite{Sundaram_1999_Wave-packet} We expand the position-dependent electric field $\vb{E}(\vb{x})$ around the origin as 
 \be
     E_{\mu}(\vb{x})&=e_{\mu}+e_{\mu\nu}x_{\nu},
 \ee
@@ -141,7 +150,41 @@ We thank Teruaki Suyama, So Tanaka, and Ryutaro Tomomatsu for useful discussions
 \bibliography{IFE.bib}
 
 \begin{widetext}
-\section*{End Matter}
+\section*{Appendix}
+
+\subsection{Electron equation of motion under non-uniform oscillating electric field}
+
+\subsection{Distribution function in order of frequency}
+We write the distribution function of electrons in order of frequency and see that the result is in agreement with the result by Sodemann and Fu~\cite{Sodemann_2015_Nonlinear}.
+
+We write the real distribution function \(f(\bm{q},t)\) using a complex representation as
+\be
+    f(\bm{q},t)&=\Re\left[\sum_{n=0}^{\infty}\tilde{f}_n(\bm{q})e^{in\omega t}\right]\qquad \left(\tilde{f}_n\in\mathbb{C}\right).\label{eq:f_expansion}
+\ee
+The Boltzmann equation is
+\be
+    f(\bm{q},t)&=f_0(\bm{q})-\left(\frac{\tau Q}{\hbar}E_a\frac{\partial}{\partial q_a}+\tau\frac{\partial}{\partial t}\right)f(\bm{q},t),
+\ee
+where \(f_0(\bm{q})\) is an equilibrium distribution function, \(E_a=\Re\left[\tilde{E}_ae^{i\omega t}\right]\) is the electric field, and \(\tau\) is the relaxation time. By substituting Eq.~\eqref{eq:f_expansion}, we get
+\be
+    \sum_{n=0}^{\infty}\tilde{f}_n(\bm{q})e^{in\omega t}+\mathrm{c.c.}&=2f_0-\left(\frac{\tau Q}{2\hbar}\left(\tilde{E}_ae^{i\omega t}+\tilde{E}_a^*e^{-i\omega t}\right)\frac{\partial}{\partial q_a}+\tau\frac{\partial}{\partial t}\right)\left(\sum_{n=0}^{\infty}\tilde{f}_n(\bm{q})e^{in\omega t}+\mathrm{c.c.}\right)\nonumber\\
+    &=f_0-\frac{\tau Q}{2\hbar}\left(\tilde{E}_a\sum_{n=0}^{\infty}\tilde{f}_ne^{i(n+1)\omega t}+\tilde{E}_a^*\sum_{n=0}^{\infty}\tilde{f}_ne^{i(n-1)\omega t}\right)-\sum_{n=0}^{\infty}in\omega\tau \tilde{f}_ne^{in\omega t}+\mathrm{c.c.}\nonumber\\
+    &=f_0-\frac{\tau Q}{2\hbar}\left(\tilde{E}_a\sum_{n=1}^{\infty}\tilde{f}_{n-1}e^{in\omega t}+\tilde{E}_a^*\sum_{n=-1}^{\infty}\tilde{f}_{n+1}e^{in\omega t}\right)-\sum_{n=0}^{\infty}in\omega\tau \tilde{f}_ne^{in\omega t}+\mathrm{c.c.}.
+\ee
+By equating terms by order of \(e^{i\omega t}\), we get
+\be
+    \tilde{f}_0&=f_0-\frac{\tau Q}{2\hbar}\tilde{E}_a^*\frac{\partial \tilde{f}_1}{\partial q_a},\\
+    \tilde{f}_1&=-\frac{\tau Q}{2\hbar}\left(\tilde{E}_a\frac{\partial\tilde{f}_0}{\partial q_a}+\tilde{E}_a\frac{\partial\tilde{f}_0^*}{\partial q_a}+\tilde{E}_a^*\frac{\partial\tilde{f}_2}{\partial q_a}\right)-i\omega\tau\tilde{f}_1\nonumber\\
+    \therefore \tilde{f}_1&=-\frac{1}{2(1+i\omega\tau)}\frac{\tau Q}{\hbar}\left(\tilde{E}_a\frac{\partial\left(\tilde{f}_0+\tilde{f}_0^*\right)}{\partial q_a}+\tilde{E}_a^*\frac{\partial\tilde{f}_2}{\partial q_a}\right),\\
+    \tilde{f}_n&=-\frac{\tau Q}{2\hbar}\left(\tilde{E}_a\frac{\partial\tilde{f}_{n-1}}{\partial q_a}+\tilde{E}_a^*\frac{\partial\tilde{f}_{n+1}}{\partial q_a}\right)-in\omega\tau\tilde{f}_n\nonumber\\
+    \therefore \tilde{f}_n&=-\frac{1}{2(1+in\omega\tau)}\frac{\tau Q}{\hbar}\left(\tilde{E}_a\frac{\partial\tilde{f}_{n-1}}{\partial q_a}+\tilde{E}_a^*\frac{\partial\tilde{f}_{n+1}}{\partial q_a}\right)\qquad\left(n\geq2\right).
+\ee
+By using these relationships, we can get arbitrary \(\tilde{f}_n\). As \(\tilde{f}_n\) contains at least \(\tilde{E}^n\), up to second-order of the electric field, we get a non-oscillating part of the distribution function as
+\be
+    \tilde{f}_0&=f_0+\frac{1}{2(1+i\omega\tau)}\left(\frac{\tau Q}{\hbar}\right)^2\frac{\partial^2f_0}{\partial q_a\partial q_b}\tilde{E}_a^*\tilde{E}_b.
+\ee
+This result is in agreement with the one by Sodemann and Fu~\cite{Sodemann_2015_Nonlinear}, in which the distribution function is first expanded in order of external electric field and later organized by frequency. These two methods are equivalent as \(\tilde{E}\) only appear in pair with \(e^{i\omega t}\), but our method provides more transparent view for generalization to \(n\)-th order expansion.
+
 
 Quantum metric quadrupole for general two-level systems with Hamiltonian of the form $H=h_0\sigma_0+\vb{h}\cdot\boldsymbol{\sigma}$, where $\sigma_0$ is an identity matrix and $\boldsymbol{\sigma}$ is a vector of Pauli matrices is given by
 \be

@@ -6,7 +6,7 @@
 %Control: page (0) single
 %Control: year (1) truncated
 %Control: production of eprint (0) enabled
-\begin{thebibliography}{22}%
+\begin{thebibliography}{24}%
 \makeatletter
 \providecommand \@ifxundefined [1]{%
  \@ifx{#1\undefined}
@@ -91,9 +91,9 @@
 \bibitem [{\citenamefont {Ahn}\ \emph {et~al.}(2022)\citenamefont {Ahn}, \citenamefont {Guo}, \citenamefont {Nagaosa},\ and\ \citenamefont {Vishwanath}}]{ahn.etal2022}%
   \BibitemOpen
   \bibfield  {author} {\bibinfo {author} {\bibfnamefont {J.}~\bibnamefont {Ahn}}, \bibinfo {author} {\bibfnamefont {G.-Y.}\ \bibnamefont {Guo}}, \bibinfo {author} {\bibfnamefont {N.}~\bibnamefont {Nagaosa}},\ and\ \bibinfo {author} {\bibfnamefont {A.}~\bibnamefont {Vishwanath}},\ }\bibfield  {title} {\bibinfo {title} {Riemannian geometry of resonant optical responses},\ }\href {https://www.nature.com/articles/s41567-021-01465-z} {\bibfield  {journal} {\bibinfo  {journal} {Nat. Phys.}\ }\textbf {\bibinfo {volume} {18}},\ \bibinfo {pages} {290} (\bibinfo {year} {2022})}\BibitemShut {NoStop}%
-\bibitem [{\citenamefont {Sodemann}\ and\ \citenamefont {Fu}(2015)}]{Fu_2015}%
+\bibitem [{\citenamefont {Sodemann}\ and\ \citenamefont {Fu}(2015{\natexlab{a}})}]{Fu_2015}%
   \BibitemOpen
-  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {I.}~\bibnamefont {Sodemann}}\ and\ \bibinfo {author} {\bibfnamefont {L.}~\bibnamefont {Fu}},\ }\bibfield  {title} {\bibinfo {title} {{Quantum Nonlinear Hall Effect Induced by Berry Curvature Dipole in Time-Reversal Invariant Materials}},\ }\href {https://link.aps.org/doi/10.1103/PhysRevLett.115.216806} {\bibfield  {journal} {\bibinfo  {journal} {Phys. Rev. Lett.}\ }\textbf {\bibinfo {volume} {115}},\ \bibinfo {pages} {216806} (\bibinfo {year} {2015})}\BibitemShut {NoStop}%
+  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {I.}~\bibnamefont {Sodemann}}\ and\ \bibinfo {author} {\bibfnamefont {L.}~\bibnamefont {Fu}},\ }\bibfield  {title} {\bibinfo {title} {{Quantum Nonlinear Hall Effect Induced by Berry Curvature Dipole in Time-Reversal Invariant Materials}},\ }\href {https://link.aps.org/doi/10.1103/PhysRevLett.115.216806} {\bibfield  {journal} {\bibinfo  {journal} {Phys. Rev. Lett.}\ }\textbf {\bibinfo {volume} {115}},\ \bibinfo {pages} {216806} (\bibinfo {year} {2015}{\natexlab{a}})}\BibitemShut {NoStop}%
 \bibitem [{\citenamefont {Gao}\ \emph {et~al.}(2014)\citenamefont {Gao}, \citenamefont {Yang},\ and\ \citenamefont {Niu}}]{Gao_positional_2014}%
   \BibitemOpen
   \bibfield  {author} {\bibinfo {author} {\bibfnamefont {Y.}~\bibnamefont {Gao}}, \bibinfo {author} {\bibfnamefont {S.~A.}\ \bibnamefont {Yang}},\ and\ \bibinfo {author} {\bibfnamefont {Q.}~\bibnamefont {Niu}},\ }\bibfield  {title} {\bibinfo {title} {{Field Induced Positional Shift of Bloch Electrons and Its Dynamical Implications}},\ }\href {https://link.aps.org/doi/10.1103/PhysRevLett.112.166601} {\bibfield  {journal} {\bibinfo  {journal} {Phys. Rev. Lett.}\ }\textbf {\bibinfo {volume} {112}},\ \bibinfo {pages} {166601} (\bibinfo {year} {2014})}\BibitemShut {NoStop}%
@@ -109,10 +109,16 @@
 \bibitem [{\citenamefont {Lapa}\ and\ \citenamefont {Hughes}(2019)}]{Lapa_Hughes_2019}%
   \BibitemOpen
   \bibfield  {author} {\bibinfo {author} {\bibfnamefont {M.~F.}\ \bibnamefont {Lapa}}\ and\ \bibinfo {author} {\bibfnamefont {T.~L.}\ \bibnamefont {Hughes}},\ }\bibfield  {title} {\bibinfo {title} {Semiclassical wave packet dynamics in nonuniform electric fields},\ }\href {https://doi.org/10.1103/PhysRevB.99.121111} {\bibfield  {journal} {\bibinfo  {journal} {Phys. Rev. B}\ }\textbf {\bibinfo {volume} {99}},\ \bibinfo {pages} {121111} (\bibinfo {year} {2019})}\BibitemShut {NoStop}%
+\bibitem [{\citenamefont {Sundaram}\ and\ \citenamefont {Niu}(1999)}]{Sundaram_1999_Wave-packet}%
+  \BibitemOpen
+  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {G.}~\bibnamefont {Sundaram}}\ and\ \bibinfo {author} {\bibfnamefont {Q.}~\bibnamefont {Niu}},\ }\bibfield  {title} {\bibinfo {title} {{Wave-packet dynamics in slowly perturbed crystals: Gradient corrections and Berry-phase effects}},\ }\href {https://doi.org/10.1103/PhysRevB.59.14915} {\bibfield  {journal} {\bibinfo  {journal} {Phys. Rev. B}\ }\textbf {\bibinfo {volume} {59}},\ \bibinfo {pages} {14915} (\bibinfo {year} {1999})}\BibitemShut {NoStop}%
 \bibitem [{\citenamefont {Provost}\ and\ \citenamefont {Vallee}(1980)}]{Provost_1980}%
   \BibitemOpen
   \bibfield  {author} {\bibinfo {author} {\bibfnamefont {J.~P.}\ \bibnamefont {Provost}}\ and\ \bibinfo {author} {\bibfnamefont {G.}~\bibnamefont {Vallee}},\ }\bibfield  {title} {\bibinfo {title} {{Riemannian structure on manifolds of quantum states}},\ }\href {https://doi.org/10.1007/BF02193559} {\bibfield  {journal} {\bibinfo  {journal} {Commun. Math. Phys.}\ }\textbf {\bibinfo {volume} {76}},\ \bibinfo {pages} {289} (\bibinfo {year} {1980})}\BibitemShut {NoStop}%
 \bibitem [{\citenamefont {Liu}\ \emph {et~al.}(2025)\citenamefont {Liu}, \citenamefont {Wang}, \citenamefont {Li}, \citenamefont {Zhao}, \citenamefont {Liao},\ and\ \citenamefont {Liao}}]{Liu_2025_metric_quadrupole}%
   \BibitemOpen
   \bibfield  {author} {\bibinfo {author} {\bibfnamefont {X.-Y.}\ \bibnamefont {Liu}}, \bibinfo {author} {\bibfnamefont {A.-Q.}\ \bibnamefont {Wang}}, \bibinfo {author} {\bibfnamefont {D.}~\bibnamefont {Li}}, \bibinfo {author} {\bibfnamefont {T.-Y.}\ \bibnamefont {Zhao}}, \bibinfo {author} {\bibfnamefont {X.}~\bibnamefont {Liao}},\ and\ \bibinfo {author} {\bibfnamefont {Z.-M.}\ \bibnamefont {Liao}},\ }\bibfield  {title} {\bibinfo {title} {{Giant Third-Order Nonlinearity Induced by the Quantum Metric Quadrupole in Few-Layer ${\mathrm{WTe}}_{2}$}},\ }\href {https://doi.org/10.1103/PhysRevLett.134.026305} {\bibfield  {journal} {\bibinfo  {journal} {Phys. Rev. Lett.}\ }\textbf {\bibinfo {volume} {134}},\ \bibinfo {pages} {026305} (\bibinfo {year} {2025})}\BibitemShut {NoStop}%
+\bibitem [{\citenamefont {Sodemann}\ and\ \citenamefont {Fu}(2015{\natexlab{b}})}]{Sodemann_2015_Nonlinear}%
+  \BibitemOpen
+  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {I.}~\bibnamefont {Sodemann}}\ and\ \bibinfo {author} {\bibfnamefont {L.}~\bibnamefont {Fu}},\ }\bibfield  {title} {\bibinfo {title} {{Quantum Nonlinear Hall Effect Induced by Berry Curvature Dipole in Time-Reversal Invariant Materials}},\ }\href {https://doi.org/10.1103/PhysRevLett.115.216806} {\bibfield  {journal} {\bibinfo  {journal} {Phys. Rev. Lett.}\ }\textbf {\bibinfo {volume} {115}},\ \bibinfo {pages} {216806} (\bibinfo {year} {2015}{\natexlab{b}})}\BibitemShut {NoStop}%
 \end{thebibliography}%
